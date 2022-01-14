@@ -16,7 +16,7 @@ def execute(cmd):
     return output.decode()
 
 
-class NetCat:
+class ReverseShell:
     def __init__(self, args, buffer=None):
         self.args = args
         self.buffer = buffer
@@ -136,6 +136,6 @@ if __name__ == '__main__':
         # shell in order to send commands after connecting.
         buffer = sys.stdin.read()
 
-    nc = NetCat(args, buffer.encode())
-    nc.run()
+    rs = ReverseShell(args, buffer.encode())
+    rs.run()
 
